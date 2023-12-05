@@ -575,6 +575,9 @@ public:
   // implementation on real-world examples.
   std::string OpenACCMacroOverride;
 
+  /// Name of the exec charset to convert the internal charset to.
+  std::string ExecCharset;
+
   LangOptions();
 
   /// Set language defaults for the given input language and

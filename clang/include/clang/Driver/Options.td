@@ -6687,6 +6687,11 @@ def darwin_target_variant_triple : Separate<["-"], "darwin-target-variant-triple
 
 let Visibility = [CC1Option, CC1AsOption, FC1Option] in {
 
+def fexec_charset : Separate<["-"], "fexec-charset">, MetaVarName<"<charset>">,
+  HelpText<"Set the execution <charset> for string and character literals. "
+           "Supported character encodings include ISO8859-1, UTF-8, IBM-1047 "
+           "and those supported by the host icu or iconv library.">,
+  MarshallingInfoString<LangOpts<"ExecCharset">>;
 def target_cpu : Separate<["-"], "target-cpu">,
   HelpText<"Target a specific cpu type">,
   MarshallingInfoString<TargetOpts<"CPU">>;
