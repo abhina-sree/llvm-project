@@ -489,6 +489,9 @@ public:
   /// For example, "fooos1.2.3" would return "1.2.3".
   StringRef getEnvironmentVersionString() const;
 
+  /// getSystemCharset - Get the system charset of the triple.
+  StringRef getSystemCharset() const;
+
   /// @}
   /// @name Convenience Predicates
   /// @{
