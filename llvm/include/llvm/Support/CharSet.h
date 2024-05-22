@@ -52,7 +52,6 @@ public:
   /// In case of an error, the result string contains the successfully converted
   /// part of the input string.
   ///
-
   virtual std::error_code convert(StringRef Source,
                                   SmallVectorImpl<char> &Result) const = 0;
 };
