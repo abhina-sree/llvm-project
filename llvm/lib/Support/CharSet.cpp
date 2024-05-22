@@ -166,9 +166,8 @@ CharSetConverterICU::convert(StringRef Source,
           Capacity < std::numeric_limits<size_t>::max()) {
         HandleOverflow(Capacity, Output, OutputLength, Result);
         continue;
-      } else
-        // Some other error occured.
-        return std::error_code(EILSEQ, std::generic_category());
+      // Some other error occured.
+      return std::error_code(EILSEQ, std::generic_category());
     }
     break;
   } while (true);
